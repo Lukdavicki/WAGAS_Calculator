@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PG GN Calc</title>
+	</head>
+	<body>
+		<header>
+			<img class="mexLogo" src="mex_logomini.jpg" alt="mex_logo" />
+			<h1>S348 WAGAS KALKULATOR</h1>
+		</header>
+		<div class="inputContainer">
+			<div class="valueInput">
+				<label for="itemPrice"></label>
+				<input type="text" id="itemPrice" placeholder="Cena produktu" />
+
+				<input type="button" id="countBtn" value="Oblicz!" />
+				<label for="countBtn"></label>
+				<div class="monthPay">
+					<input type="checkbox" id="monthPay" />
+					<label for="monthPay">Płatność miesięczna(wprowadzona później)</label>
+				</div>
+			</div>
+		</div>
+		<div class="radioDiv">
+			<div class="radioRTV">
+				<input type="radio" id="RTV" name="genre" value="RTV" />
+				<label for="RTV">RTV</label>
+			</div>
+			<div class="radioAGD">
+				<input type="radio" id="AGD" name="genre" value="AGD" />
+				<label for="AGD">AGD</label>
+			</div>
+			<div class="radioIT">
+				<input type="radio" id="IT" name="genre" value="IT" />
+				<label for="IT">IT</label>
+			</div>
+			<div class="radioIT_MOB">
+				<input type="radio" id="IT_MOB" name="genre" value="IT_MOB" />
+				<label for="IT_MOB">IT MOBILNE</label>
+			</div>
+			<div class="radioFOTO">
+				<input type="radio" id="FOTO" name="genre" value="FOTO" />
+				<label for="FOTO">FOTO/RTV MOBILNE</label>
+			</div>
+			<div class="radioTABLETY">
+				<input type="radio" id="TABLETY" name="genre" value="TABLETY" />
+				<label for="TABLETY">TABLET</label>
+			</div>
+			<div class="radioGSM">
+				<input type="radio" id="GSM" name="genre" value="GSM" />
+				<label for="GSM">GSM/SMARTFON</label>
+			</div>
+			<div class="radioNAWIGACJE">
+				<input type="radio" id="NAWIGACJE" name="genre" value="NAWIGACJE" />
+				<label for="NAWIGACJE">NAWIGACJA</label>
+			</div>
+			<div class="radioSMARTWATCHE">
+				<input type="radio" id="SMARTWATCHE" name="genre" value="SMARTWATCHE" />
+				<label for="SMARTWATCHE">SMARTWATCH</label>
+			</div>
+		</div>
+
+		<div class="tabelContainer">
+			<table class="wagasContainer1">
+				<tr>
+					<th>PG</th>
+					<th>wartość</th>
+				</tr>
+				<tr>
+					<td>36 (2+1)</td>
+					<td id="pg36Value"></td>
+				</tr>
+				<tr>
+					<td>48 (2+2)</td>
+					<td id="pg48Value"></td>
+				</tr>
+				<tr>
+					<td>60 (2+3)</td>
+					<td id="pg60Value"></td>
+				</tr>
+				<tr>
+					<td>72 (2+4)</td>
+					<td id="pg72Value"></td>
+				</tr>
+				<tr>
+					<th>GN</th>
+					<th>wartość</th>
+				</tr>
+				<tr>
+					<td>12 (0+1)</td>
+					<td id="gn12Value"></td>
+				</tr>
+				<tr>
+					<td>36 (2+1)</td>
+					<td id="gn36Value"></td>
+				</tr>
+				<tr>
+					<td>48 (2+2)</td>
+					<td id="gn48Value"></td>
+				</tr>
+				<tr>
+					<td>60 (2+3)</td>
+					<td id="gn60Value"></td>
+				</tr>
+				<tr>
+					<th>PU</th>
+					<th>wartość</th>
+				</tr>
+				<tr>
+					<td>12 (0+1)</td>
+					<td id="pu12Value"></td>
+				</tr>
+				<tr>
+					<td>24 (0+2)</td>
+					<td id="pu24Value"></td>
+				</tr>
+				<tr>
+					<th>PUE</th>
+					<th>wartość</th>
+				</tr>
+				<tr>
+					<td>12E (0+1)</td>
+					<td id="pue12Value"></td>
+				</tr>
+				<tr>
+					<td>24E (0+2)</td>
+					<td id="pue24Value"></td>
+				</tr>
+			</table>
+			<table class="wagasContainer2">
+				<tr>
+					<th>PG1</th>
+					<th>wartość</th>
+				</tr>
+				<tr>
+					<td>361 (1+2)</td>
+					<td id="pg361Value"></td>
+				</tr>
+				<tr>
+					<td>481 (1+3)</td>
+					<td id="pg481Value"></td>
+				</tr>
+				<tr>
+					<td>601 (1+4)</td>
+					<td id="pg601Value"></td>
+				</tr>
+				<!-- <tr>
+					<td>721 (2+4)</td>
+					<td id="pg7Value"></td>
+				</tr> -->
+				<tr>
+					<th>GN1</th>
+					<th>wartość</th>
+				</tr>
+				<tr>
+					<td>121 (0+1)</td>
+					<td id="gn121Value"></td>
+				</tr>
+				<tr>
+					<td>361 (1+4)</td>
+					<td id="gn361Value"></td>
+				</tr>
+				<tr>
+					<td>481 (2+2)</td>
+					<td id="gn481Value"></td>
+				</tr>
+				<tr>
+					<td>601 (2+3)</td>
+					<td id="gn601Value"></td>
+				</tr>
+				<tr>
+					<th>PU1</th>
+					<th>wartość</th>
+				</tr>
+				<tr>
+					<td>121 (0+1)</td>
+					<td id="pu121Value"></td>
+				</tr>
+				<tr>
+					<td>241 (0+2)</td>
+					<td id="pu241Value"></td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<p>
+				Produkt ubezpieczeniowy nie stanowi gwarancji jakości produktu w
+				rozumieniu art. 577-581 kc, ani też rękojmi za wady fizyczne lub prawne.
+			</p>
+		</div>
+
+		<script src="logic2.js"></script>
+	</body>
+</html>

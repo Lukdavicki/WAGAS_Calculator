@@ -1,0 +1,7 @@
+*VALUE of item retrieve from input = type"text
+*ITEM GENRE (IT/RTV/AGD etc) retrieved from "checkbox" (or sometching like that)
+*after retrieving VALUE and ITEM GENRE use for(..){} to fire up the function.
+*basic function() paradigms :
+    -check for price and use % scale to adjust the insurenece cost (item genre wisely)
+    -for monthly paid insurenece check if min cost is TRUE, else {return N/A} 
+*CSS styles and more adv HTML will be implemented further when logic will be fully operative.

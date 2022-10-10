@@ -1,0 +1,257 @@
+body {
+	background-color: rgb(82, 82, 82);
+	color: white;
+}
+
+.tabelContainer {
+	text-align: center;
+	margin-top: 2em;
+	display: flex;
+	justify-content: space-around;
+}
+
+.wagasContainer1 td {
+	border-radius: 10px;
+	height: 1.5em;
+	background-color: black;
+	color: white;
+}
+.wagasContainer1 th {
+	border-radius: 10px;
+	height: 1.8em;
+	background-color: yellow;
+	color: rgb(0, 0, 0);
+}
+
+.wagasContainer2 td {
+	border-radius: 10px;
+	height: 1.5em;
+	background-color: black;
+	color: white;
+}
+.wagasContainer2 th {
+	border-radius: 10px;
+	height: 1.8em;
+	background-color: yellow;
+	color: rgb(0, 0, 0);
+}
+.wagasContainer1 {
+	border-collapse: separate;
+	overflow: hidden;
+	border-radius: 10px;
+	width: 40%;
+	flex-direction: row;
+}
+.wagasContainer2 {
+	border-collapse: separate;
+	overflow: hidden;
+	border-radius: 10px;
+	width: 40%;
+	flex-direction: row;
+}
+
+.mexLogo {
+	border-radius: 50%;
+	float: right;
+	max-width: 30%;
+	margin-top: -1.1em;
+}
+#itemPrice {
+	font-size: medium;
+	max-width: 40%;
+	border-radius: 25px;
+}
+#countBtn {
+	margin-left: 2em;
+	border-radius: 20px;
+	padding: 0.2em;
+	width: 6em;
+}
+.monthPay {
+	margin-top: 1.5em;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: baseline;
+}
+
+#monthPay input {
+	transform: scale(2);
+}
+.monthPay label {
+	font-size: larger;
+}
+
+.radioDiv {
+	margin-top: 1.5em;
+}
+.radioDiv div {
+	padding: 0.3em;
+}
+.radioDiv {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+#RTV:after,
+#AGD:after,
+#IT:after,
+#IT_MOB:after,
+#FOTO:after,
+#TABLETY:after,
+#GSM:after,
+#NAWIGACJE:after,
+#SMARTWATCHE:after {
+	/* appearance: none; */
+	width: 12px;
+	height: 12px;
+	border-radius: 15px;
+	top: -2px;
+	left: -1px;
+	position: relative;
+	background-color: #d1d3d1;
+	content: "";
+	display: inline-block;
+	visibility: visible;
+	border: 2px solid white;
+}
+#RTV:checked:after,
+#AGD:checked:after,
+#IT:checked:after,
+#IT_MOB:checked:after,
+#FOTO:checked:after,
+#TABLETY:checked:after,
+#GSM:checked:after,
+#NAWIGACJE:checked:after,
+#SMARTWATCHE:checked:after {
+	width: 12px;
+	height: 12px;
+	border-radius: 15px;
+	top: -2px;
+	left: -1px;
+	position: relative;
+	background-color: #fdba00;
+	content: "";
+	display: inline-block;
+	visibility: visible;
+	border: 2px solid rgb(0, 0, 0);
+}
+.radioDiv .radioRTV {
+	margin: 0.5em;
+	border: 2px solid black;
+	border-radius: 25px;
+	padding-right: 0.8em;
+	background-color: black;
+	color: yellow;
+}
+.radioDiv .radioAGD {
+	margin: 0.5em;
+	border: 2px solid black;
+	border-radius: 25px;
+	padding-right: 0.8em;
+	background-color: black;
+	color: yellow;
+}
+.radioDiv .radioIT {
+	margin: 0.5em;
+	border: 2px solid black;
+	border-radius: 25px;
+	padding-right: 0.8em;
+	background-color: black;
+	color: yellow;
+}
+.radioDiv .radioIT_MOB {
+	margin: 0.5em;
+	border: 2px solid black;
+	border-radius: 25px;
+	padding-right: 0.8em;
+	background-color: black;
+	color: yellow;
+}
+.radioDiv .radioFOTO {
+	margin: 0.5em;
+	border: 2px solid black;
+	border-radius: 25px;
+	padding-right: 0.8em;
+	background-color: black;
+	color: yellow;
+}
+.radioDiv .radioTABLETY {
+	margin: 0.5em;
+	border: 2px solid black;
+	border-radius: 25px;
+	padding-right: 0.8em;
+	background-color: black;
+	color: yellow;
+}
+.radioDiv .radioGSM {
+	margin: 0.5em;
+	border: 2px solid black;
+	border-radius: 25px;
+	padding-right: 0.8em;
+	background-color: black;
+	color: yellow;
+}
+.radioDiv .radioNAWIGACJE {
+	margin: 0.5em;
+	border: 2px solid black;
+	border-radius: 25px;
+	padding-right: 0.8em;
+	background-color: black;
+	color: yellow;
+}
+.radioDiv .radioSMARTWATCHE {
+	margin: 0.5em;
+	border: 2px solid black;
+	border-radius: 25px;
+	padding-right: 0.8em;
+	background-color: black;
+	color: yellow;
+}
+
+.radioDiv .radioRTV:hover {
+	color: black;
+	background-color: yellow;
+	transition: 0.7s;
+}
+
+.radioDiv .radioAGD:hover {
+	color: black;
+	background-color: yellow;
+	transition: 0.7s;
+}
+.radioDiv .radioIT:hover {
+	color: black;
+	background-color: yellow;
+	transition: 0.7s;
+}
+.radioDiv .radioIT_MOB:hover {
+	color: black;
+	background-color: yellow;
+	transition: 0.7s;
+}
+.radioDiv .radioFOTO:hover {
+	color: black;
+	background-color: yellow;
+	transition: 0.7s;
+}
+.radioDiv .radioTABLETY:hover {
+	color: black;
+	background-color: yellow;
+	transition: 0.7s;
+}
+.radioDiv .radioGSM:hover {
+	color: black;
+	background-color: yellow;
+	transition: 0.7s;
+}
+.radioDiv .radioNAWIGACJE:hover {
+	color: black;
+	background-color: yellow;
+	transition: 0.7s;
+}
+.radioDiv .radioSMARTWATCHE:hover {
+	color: black;
+	background-color: yellow;
+	transition: 0.7s;
+}
