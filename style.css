@@ -11,41 +11,41 @@ body {
 }
 
 .wagasContainer1 td {
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	height: 1.5em;
 	background-color: black;
 	color: white;
 }
 .wagasContainer1 th {
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	height: 1.8em;
-	background-color: yellow;
+	background-color: rgb(255, 221, 0);
 	color: rgb(0, 0, 0);
 }
 
 .wagasContainer2 td {
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	height: 1.5em;
 	background-color: black;
 	color: white;
 }
 .wagasContainer2 th {
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	height: 1.8em;
-	background-color: yellow;
+	background-color: rgb(255, 221, 0);
 	color: rgb(0, 0, 0);
 }
 .wagasContainer1 {
 	border-collapse: separate;
 	overflow: hidden;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	width: 40%;
 	flex-direction: row;
 }
 .wagasContainer2 {
 	border-collapse: separate;
 	overflow: hidden;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	width: 40%;
 	flex-direction: row;
 }
@@ -59,11 +59,11 @@ body {
 #itemPrice {
 	font-size: medium;
 	max-width: 40%;
-	border-radius: 25px;
+	/* border-radius: 15px; */
 }
 #countBtn {
 	margin-left: 2em;
-	border-radius: 20px;
+	/* border-radius: 20px; */
 	padding: 0.2em;
 	width: 6em;
 }
@@ -75,8 +75,11 @@ body {
 	align-items: baseline;
 }
 
-#monthPay input {
-	transform: scale(2);
+#monthPay{
+	transform:scale(2);
+	margin-left:1em;
+	margin-right:1em;
+	
 }
 .monthPay label {
 	font-size: larger;
@@ -211,47 +214,47 @@ body {
 
 .radioDiv .radioRTV:hover {
 	color: black;
-	background-color: yellow;
+	background-color: rgb(255, 221, 0);
 	transition: 0.7s;
 }
 
 .radioDiv .radioAGD:hover {
 	color: black;
-	background-color: yellow;
+	background-color: rgb(255, 221, 0);
 	transition: 0.7s;
 }
 .radioDiv .radioIT:hover {
 	color: black;
-	background-color: yellow;
+	background-color: rgb(255, 221, 0);
 	transition: 0.7s;
 }
 .radioDiv .radioIT_MOB:hover {
 	color: black;
-	background-color: yellow;
+	background-color: rgb(255, 221, 0);
 	transition: 0.7s;
 }
 .radioDiv .radioFOTO:hover {
 	color: black;
-	background-color: yellow;
+	background-color: rgb(255, 221, 0);
 	transition: 0.7s;
 }
 .radioDiv .radioTABLETY:hover {
 	color: black;
-	background-color: yellow;
+	background-color: rgb(255, 221, 0);
 	transition: 0.7s;
 }
 .radioDiv .radioGSM:hover {
 	color: black;
-	background-color: yellow;
+	background-color: rgb(255, 221, 0);
 	transition: 0.7s;
 }
 .radioDiv .radioNAWIGACJE:hover {
 	color: black;
-	background-color: yellow;
+	background-color: rgb(255, 221, 0);
 	transition: 0.7s;
 }
 .radioDiv .radioSMARTWATCHE:hover {
 	color: black;
-	background-color: yellow;
+	background-color: rgb(255, 221, 0);
 	transition: 0.7s;
 }
