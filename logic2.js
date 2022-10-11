@@ -1,227 +1,71 @@
 const input = document.getElementById("itemPrice");
 const countBtn = document.getElementById("countBtn");
 const resetBtn = document.getElementById("resetBtn");
+var valueFromInput;
 
+function wagasCalc(insuranceModel, insuranceMultiplier) {
+	document.getElementById(insuranceModel).textContent = `${(
+		valueFromInput * insuranceMultiplier
+	).toFixed(2)}`;
+	if (document.getElementById("monthPay").checked) {
+		if (valueFromInput * insuranceMultiplier >= 150) {
+			return (document.getElementById(insuranceModel).textContent = `${
+				(valueFromInput * insuranceMultiplier * 0.1).toFixed(2)
+			}`);
+		} else {
+			return (document.getElementById(insuranceModel).textContent = "BRAK");
+		}
+	}
+}
 const countData = (e) => {
 	e.preventDefault();
-	const valueFromInput = input.value;
-	if (valueFromInput == "") {
-		alert("Wpisz wartość towaru");
+	valueFromInput = input.value;
+	if (input.value == "") {
+		alert("Podaj kwote produktu");
 	}
 	input.value = "";
 	if (document.getElementById("RTV").checked) {
 		switch (valueFromInput) {
 			case valueFromInput:
-				document.getElementById("pg36Value").textContent = `${(
-					valueFromInput * 0.1
-				).toFixed()}`;
-				if (document.getElementById("monthPay").checked) {
-					if (valueFromInput * 0.1 >= 150) {
-						document.getElementById("pg36Value").textContent = `${(
-							valueFromInput *
-							0.1 *
-							0.1
-						).toFixed(2)}`;
-					} else document.getElementById("pg36Value").textContent = "BRAK";
-				}
-			// ? try to figure out how to make the F to check and calc if the minimum insurance cost is above 150
-
+				wagasCalc("pg36Value", 0.1);
 			case valueFromInput:
-				document.getElementById("pg48Value").textContent = `${(
-					valueFromInput * 0.15
-				).toFixed()}`;
-				if (document.getElementById("monthPay").checked) {
-					if (valueFromInput * 0.15 >= 150) {
-						document.getElementById("pg48Value").textContent = `${(
-							valueFromInput *
-							0.15 *
-							0.1
-						).toFixed(2)}`;
-					} else document.getElementById("pg48Value").textContent = "BRAK";
-				}
-
+				wagasCalc("pg48Value", 0.15);
 			case valueFromInput:
-				document.getElementById("pg60Value").textContent = `${(
-					valueFromInput * 0.2
-				).toFixed()}`;
-				if (document.getElementById("monthPay").checked) {
-					if (valueFromInput * 0.2 >= 150) {
-						document.getElementById("pg60Value").textContent = `${(
-							valueFromInput *
-							0.2 *
-							0.1
-						).toFixed(2)}`;
-					} else document.getElementById("pg60Value").textContent = "BRAK";
-				}
-
+				wagasCalc("pg60Value", 0.2);
 			case valueFromInput:
 				document.getElementById("pg72Value").textContent = "BRAK";
 			case valueFromInput:
 				document.getElementById("gn12Value").textContent = "BRAK";
-
 			case valueFromInput:
-				document.getElementById("gn36Value").textContent = `${(
-					valueFromInput * 0.18
-				).toFixed()}`;
-				if (document.getElementById("monthPay").checked) {
-					if (valueFromInput * 0.18 >= 150) {
-						document.getElementById("gn36Value").textContent = `${(
-							valueFromInput *
-							0.18 *
-							0.1
-						).toFixed(2)}`;
-					} else document.getElementById("gn36Value").textContent = "BRAK";
-				}
-
+				wagasCalc("gn36Value", 0.18);
 			case valueFromInput:
-				document.getElementById("gn48Value").textContent = `${(
-					valueFromInput * 0.22
-				).toFixed()}`;
-				if (document.getElementById("monthPay").checked) {
-					if (valueFromInput * 0.22 >= 150) {
-						document.getElementById("gn48Value").textContent = `${(
-							valueFromInput *
-							0.22 *
-							0.1
-						).toFixed(2)}`;
-					} else document.getElementById("gn48Value").textContent = "BRAK";
-				}
+				wagasCalc("gn48Value", 0.22);
 			case valueFromInput:
-				document.getElementById("gn60Value").textContent = `${(
-					valueFromInput * 0.26
-				).toFixed()}`;
-				if (document.getElementById("monthPay").checked) {
-					if (valueFromInput * 0.26 >= 150) {
-						document.getElementById("gn60Value").textContent = `${(
-							valueFromInput *
-							0.26 *
-							0.1
-						).toFixed(2)}`;
-					} else document.getElementById("gn60Value").textContent = "BRAK";
-				}
+				wagasCalc("gn60Value", 0.26);
 			case valueFromInput:
-				document.getElementById("pu12Value").textContent = `${(
-					valueFromInput * 0.11
-				).toFixed()}`;
-				if (document.getElementById("monthPay").checked) {
-					if (valueFromInput * 0.11 >= 150) {
-						document.getElementById("pu12Value").textContent = `${(
-							valueFromInput *
-							0.11 *
-							0.1
-						).toFixed(2)}`;
-					} else document.getElementById("pu12Value").textContent = "BRAK";
-				}
+				wagasCalc("pu12Value", 0.11);
 			case valueFromInput:
-				document.getElementById("pu24Value").textContent = `${(
-					valueFromInput * 0.14
-				).toFixed()}`;
-				if (document.getElementById("monthPay").checked) {
-					if (valueFromInput * 0.14 >= 150) {
-						document.getElementById("pu24Value").textContent = `${(
-							valueFromInput *
-							0.14 *
-							0.1
-						).toFixed(2)}`;
-					} else document.getElementById("pu24Value").textContent = "BRAK";
-				}
+				wagasCalc("pu24Value", 0.14);
 			case valueFromInput:
 				document.getElementById("pue12Value").textContent = "BRAK";
 			case valueFromInput:
 				document.getElementById("pue24Value").textContent = "BRAK";
 			case valueFromInput:
-				document.getElementById("pg361Value").textContent = `${(
-					valueFromInput * 0.13
-				).toFixed()}`;
-				if (document.getElementById("monthPay").checked) {
-					if (valueFromInput * 0.13 >= 150) {
-						document.getElementById("pg361Value").textContent = `${(
-							valueFromInput *
-							0.13 *
-							0.1
-						).toFixed(2)}`;
-					} else document.getElementById("pg361Value").textContent = "BRAK";
-				}
+				wagasCalc("pg361Value", 0.13);
 			case valueFromInput:
-				document.getElementById("pg481Value").textContent = `${(
-					valueFromInput * 0.18
-				).toFixed()}`;
-				if (document.getElementById("monthPay").checked) {
-					if (valueFromInput * 0.18 >= 150) {
-						document.getElementById("pg481Value").textContent = `${(
-							valueFromInput *
-							0.18 *
-							0.1
-						).toFixed(2)}`;
-					} else document.getElementById("pg481Value").textContent = "BRAK";
-				}
+				wagasCalc("pg481Value", 0.18);
 			case valueFromInput:
-				document.getElementById("pg601Value").textContent = `${(
-					valueFromInput * 0.23
-				).toFixed()}`;
-				if (document.getElementById("monthPay").checked) {
-					if (valueFromInput * 0.23 >= 150) {
-						document.getElementById("pg601Value").textContent = `${(
-							valueFromInput *
-							0.23 *
-							0.1
-						).toFixed(2)}`;
-					} else document.getElementById("pg601Value").textContent = "BRAK";
-				}
+				wagasCalc("pg601Value", 0.23);
 			case valueFromInput:
 				document.getElementById("gn121Value").textContent = "BRAK";
 			case valueFromInput:
-				document.getElementById("gn361Value").textContent = `${(
-					valueFromInput * 0.21
-				).toFixed()}`;
-				if (document.getElementById("monthPay").checked) {
-					if (valueFromInput * 0.21 >= 150) {
-						document.getElementById("gn361Value").textContent = `${(
-							valueFromInput *
-							0.21 *
-							0.1
-						).toFixed(2)}`;
-					} else document.getElementById("gn361Value").textContent = "BRAK";
-				}
+				wagasCalc("gn361Value", 0.21);
 			case valueFromInput:
-				document.getElementById("gn481Value").textContent = `${(
-					valueFromInput * 0.25
-				).toFixed()}`;
-				if (document.getElementById("monthPay").checked) {
-					if (valueFromInput * 0.25 >= 150) {
-						document.getElementById("gn481Value").textContent = `${(
-							valueFromInput *
-							0.25 *
-							0.1
-						).toFixed(2)}`;
-					} else document.getElementById("gn481Value").textContent = "BRAK";
-				}
+				wagasCalc("gn481Value", 0.25);
 			case valueFromInput:
-				document.getElementById("gn601Value").textContent = `${(
-					valueFromInput * 0.29
-				).toFixed()}`;
-				if (document.getElementById("monthPay").checked) {
-					if (valueFromInput * 0.29 >= 150) {
-						document.getElementById("gn601Value").textContent = `${(
-							valueFromInput *
-							0.29 *
-							0.1
-						).toFixed(2)}`;
-					} else document.getElementById("gn601Value").textContent = "BRAK";
-				}
+				wagasCalc("gn601Value", 0.29);
 			case valueFromInput:
-				document.getElementById("pu121Value").textContent = `${(
-					valueFromInput * 0.21
-				).toFixed()}`;
-				if (document.getElementById("monthPay").checked) {
-					if (valueFromInput * 0.21 >= 150) {
-						document.getElementById("pu121Value").textContent = `${(
-							valueFromInput *
-							0.21 *
-							0.1
-						).toFixed(2)}`;
-					} else document.getElementById("pu121Value").textContent = "BRAK";
-				}
+				wagasCalc("pu121Value", 0.21);
 			case valueFromInput:
 				document.getElementById("pu241Value").textContent = "BRAK";
 		}
