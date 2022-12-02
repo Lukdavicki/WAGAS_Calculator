@@ -9,9 +9,11 @@ function wagasCalc(insuranceModel, insuranceMultiplier) {
 	).toFixed(2)}`;
 	if (document.getElementById("monthPay").checked) {
 		if (valueFromInput * insuranceMultiplier >= 150) {
-			return (document.getElementById(insuranceModel).textContent = `${
-				(valueFromInput * insuranceMultiplier * 0.1).toFixed(2)
-			}`);
+			return (document.getElementById(insuranceModel).textContent = `${(
+				valueFromInput *
+				insuranceMultiplier *
+				0.1
+			).toFixed(2)}`);
 		} else {
 			return (document.getElementById(insuranceModel).textContent = "BRAK");
 		}
